@@ -9,16 +9,18 @@ AV.Cloud.define("hello", function(request, response) {
                 var1.save(null, {
                                success: function(gameScore) {
                                // Execute any logic that should take place after the object is saved.
-                               alert('New object created with objectId: ' + gameScore.id);
+//                               alert('New object created with objectId: ' + gameScore.id);
+                          response.success("success");
                                },
                                error: function(gameScore, error) {
                                // Execute any logic that should take place if the save fails.
                                // error is a AV.Error with an error code and description.
-                               alert('Failed to create new object, with error code: ' + error.description);
+//                               alert('Failed to create new object, with error code: ' + error.description);
+                          response.success("fail");
                                }
                 
                 
-  response.success("Hello worlddddddd!");
+//  response.success("Hello worlddddddd!");
 });
 
 AV.Cloud.define("hello2", function(request, response) {
