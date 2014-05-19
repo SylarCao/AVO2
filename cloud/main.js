@@ -2,36 +2,16 @@
 // For example:
 AV.Cloud.define("hello", function(request, response) {
                 
-                var Var1 = AV.Object.extend("CClass1");
-                
-                var var1 = new Var1();
-                
-                var1.set("num1", 21);
-                
-                var1.save(null, {
-                               success: function(var1) {
-                               // Execute any logic that should take place after the object is saved.
-//                               alert('New object created with objectId: ' + gameScore.id);
-                          response.success("ss");
-                               },
-                          
-                               error: function(var1, error) {
-                               // Execute any logic that should take place if the save fails.
-                               // error is a AV.Error with an error code and description.
-                          response.fail("ff", error);
-//                               alert('Failed to create new object, with error code: ' + error.description);
-                               }
-                          
-                               });
+
+                var comment = request.object.get("key");
                 
                 
-//  response.success("Hello worlddddddd!");
+  response.success(comment);
 });
 
 AV.Cloud.define("hello2", function(request, response) {
                 
-                var var1 = AV.Object.extend("CClass1");
-                
+
                 
                 response.success("Hello worlddddddd222222!");
-                });
+});
