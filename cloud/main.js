@@ -2,7 +2,9 @@
 // For example:
 AV.Cloud.define("hello", function(request, response) {
                 
-                var var1 = AV.Object.extend("CClass1");
+                var Var1 = AV.Object.extend("CClass1");
+                
+                var var1 = new Var1();
                 
                 var1.set("num1", 21);
                 
